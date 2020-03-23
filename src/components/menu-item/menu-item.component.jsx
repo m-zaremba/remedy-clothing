@@ -1,9 +1,17 @@
 import React from 'react';
 import './menu-item.styles.scss';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-const MenuItem = ({ title, imageUrl, size }) => {
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   return (
-    <div className={size ? `menu-item ${size}` : 'menu-item'}>
+    <div
+      role="button"
+      tabIndex={0}
+      className={size ? `menu-item ${size}` : 'menu-item'}
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+      onKeyDown={() => history.push(`${match.url}${linkUrl}`)}
+    >
       <div
         style={{
           backgroundImage: `url(${imageUrl})`,
@@ -18,4 +26,18 @@ const MenuItem = ({ title, imageUrl, size }) => {
   );
 };
 
-export default MenuItem;
+MenuItem.defaultProps = {
+  size: null,
+  linkUrl: null,
+};
+
+MenuItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  size: PropTypes.string,
+  history: PropTypes.objectOf(PropTypes.shape).isRequired,
+  linkUrl: PropTypes.string,
+  match: PropTypes.objectOf(PropTypes.shape).isRequired,
+};
+
+export default withRouter(MenuItem);
