@@ -1,7 +1,8 @@
 import React from 'react';
 import './collection-item.styles.scss';
+import PropTypes from 'prop-types';
 
-const CollectionItem = ({ id, name, price, imageUrl }) => {
+const CollectionItem = ({ name, price, imageUrl }) => {
   return (
     <div className="collection-item">
       <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
@@ -11,6 +12,12 @@ const CollectionItem = ({ id, name, price, imageUrl }) => {
       </div>
     </div>
   );
+};
+
+CollectionItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  imageUrl: PropTypes.string.isRequired,
 };
 
 export default CollectionItem;
