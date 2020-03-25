@@ -24,13 +24,11 @@ class SignIn extends Component {
 
   handleChange = (event) => {
     const { value, name } = event.target;
-
     this.setState({ [name]: value });
   };
 
   render() {
     const { email, password } = this.state;
-
     return (
       <div className="sign-in">
         <h2>I already have an account</h2>

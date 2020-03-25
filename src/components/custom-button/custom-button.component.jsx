@@ -5,8 +5,6 @@ import './custom-button.styles.scss';
 import PropTypes from 'prop-types';
 
 const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => {
-  console.log(isGoogleSignIn);
-
   return (
     <button className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`} {...otherProps}>
       {children}
@@ -16,12 +14,13 @@ const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => {
 
 CustomButton.defaultProps = {
   type: 'submit',
+  isGoogleSignIn: false,
 };
 
 CustomButton.propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.string,
-  isGoogleSignIn: PropTypes.bool.isRequired,
+  isGoogleSignIn: PropTypes.bool,
 };
 
 export default CustomButton;
