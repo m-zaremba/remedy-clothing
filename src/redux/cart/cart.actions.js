@@ -4,4 +4,7 @@ export const toggleCartHidden = () => ({
   type: cartActionTypes.TOGGLE_CART_HIDDEN,
 });
 
-export const placeholder = null; // to make airbnb rules shut up for a minute
+export const addItem = (item) => ({
+  type: cartActionTypes.ADD_ITEM,
+  payload: item,
+});
