@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import './header.styles.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { ReactComponent as Logo } from '../../assets/crown.svg';
+// import { ReactComponent as Logo } from '../../assets/crown.svg';
+import PropTypes from 'prop-types';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../card-dropdown/cart-dropdown.component';
@@ -12,7 +12,8 @@ const Header = ({ currentUser, hidden }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        <Logo className="logo" />
+        {/* <Logo className="logo" /> */}
+        <span className="logo">REMEDY</span>
       </Link>
       <div className="options">
         <Link className="option" to="/shop">
@@ -47,5 +48,14 @@ const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
   currentUser,
   hidden,
 });
+
+Header.defaultProps = {
+  currentUser: null,
+};
+
+Header.propTypes = {
+  hidden: PropTypes.bool.isRequired,
+  currentUser: PropTypes.shape({}),
+};
 
 export default connect(mapStateToProps)(Header);
