@@ -3,7 +3,6 @@ import './header.styles.scss';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-// import { ReactComponent as Logo } from '../../assets/crown.svg';
 import PropTypes from 'prop-types';
 import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../cart-icon/cart-icon.component';
@@ -15,7 +14,6 @@ const Header = ({ currentUser, hidden }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        {/* <Logo className="logo" /> */}
         <span className="logo">REMEDY</span>
       </Link>
       <div className="options">
