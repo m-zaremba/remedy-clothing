@@ -1,58 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createStructuredSelector } from 'reselect';
+import { selectDirectorySections } from '../../redux/directory/directory.selectors';
 import MenuItem from '../menu-item/menu-item.component';
 import './directory.styles.scss';
 
-class Directory extends Component {
-  constructor() {
-    super();
-    this.state = {
-      sections: [
-        {
-          title: 'hats',
-          imageUrl: '/images/hats.png',
-          id: 1,
-          linkUrl: 'hats',
-        },
-        {
-          title: 'jackets',
-          imageUrl: '/images/jackets.png',
-          id: 2,
-          linkUrl: '',
-        },
-        {
-          title: 'sneakers',
-          imageUrl: '/images/sneakers.png',
-          id: 3,
-          linkUrl: '',
-        },
-        {
-          title: 'womens',
-          imageUrl: '/images/womens.png',
-          size: 'large',
-          id: 4,
-          linkUrl: '',
-        },
-        {
-          title: 'mens',
-          imageUrl: '/images/men.png',
-          size: 'large',
-          id: 5,
-          linkUrl: '',
-        },
-      ],
-    };
-  }
+const Directory = ({ sections }) => {
+  return (
+    <div className="directory-menu">
+      {sections.map(({ title, imageUrl, id, size, linkUrl }) => (
+        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl} />
+      ))}
+    </div>
+  );
+};
 
-  render() {
-    const { sections } = this.state;
-    return (
-      <div className="directory-menu">
-        {sections.map(({ title, imageUrl, id, size, linkUrl }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl} />
-        ))}
-      </div>
-    );
-  }
-}
+const mapStateToProps = createStructuredSelector({
+  sections: selectDirectorySections,
+});
 
-export default Directory;
+Directory.propTypes = {
+  sections: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default connect(mapStateToProps)(Directory);
