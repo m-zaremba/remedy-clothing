@@ -5,8 +5,10 @@ module.exports = {
     'no-shadow': [
       'error',
       {
-        allow: ['addItem', 'toggleCartHidden'],
+        allow: ['addItem', 'toggleCartHidden', 'setCurrentUser', 'removeItem'],
       },
     ],
+    'import/prefer-default-export': 'off',
+    // 'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
   },
 };
