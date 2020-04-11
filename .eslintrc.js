@@ -5,10 +5,11 @@ module.exports = {
     'no-shadow': [
       'error',
       {
-        allow: ['addItem', 'toggleCartHidden', 'setCurrentUser', 'removeItem'],
+        allow: ['addItem', 'toggleCartHidden', 'setCurrentUser', 'removeItem', 'updateCollections'],
       },
     ],
     'import/prefer-default-export': 'off',
     // 'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
+    'react/jsx-props-no-spreading': 0,
   },
 };
