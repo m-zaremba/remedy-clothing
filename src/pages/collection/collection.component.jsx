@@ -32,11 +32,11 @@ const mapStateToProps = (state, ownProps) => ({
 
 CollectionPage.propTypes = {
   collection: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     routeName: PropTypes.string,
     items: PropTypes.array,
-  }).isRequired,
+  }),
 };
 
 export default connect(mapStateToProps)(CollectionPage);

@@ -12,8 +12,15 @@ import { CollectionsOverviewContainer } from './collections-overview.styles';
 const CollectionsOverview = ({ collections }) => {
   return (
     <CollectionsOverviewContainer>
-      {collections.map(({ id, title, items }) => (
-        <CollectionPreview key={id} title={title} items={items} />
+      {collections.map(({ id, title, items, history, match, routeName }) => (
+        <CollectionPreview
+          key={id}
+          title={title}
+          items={items}
+          history={history}
+          match={match}
+          routeName={routeName}
+        />
       ))}
     </CollectionsOverviewContainer>
   );
