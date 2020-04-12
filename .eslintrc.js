@@ -5,7 +5,14 @@ module.exports = {
     'no-shadow': [
       'error',
       {
-        allow: ['addItem', 'toggleCartHidden', 'setCurrentUser', 'removeItem', 'updateCollections'],
+        allow: [
+          'addItem',
+          'toggleCartHidden',
+          'setCurrentUser',
+          'removeItem',
+          'updateCollections',
+          'fetchCollectionsStartAsync',
+        ],
       },
     ],
     'import/prefer-default-export': 'off',
