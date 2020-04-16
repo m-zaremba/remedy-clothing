@@ -12,6 +12,7 @@ module.exports = {
           'removeItem',
           'updateCollections',
           'fetchCollectionsStartAsync',
+          'fetchCollectionsStart',
         ],
       },
     ],
