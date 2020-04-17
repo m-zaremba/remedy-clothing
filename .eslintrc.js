@@ -13,6 +13,7 @@ module.exports = {
           'updateCollections',
           'fetchCollectionsStartAsync',
           'fetchCollectionsStart',
+          'googleSignInStart',
         ],
       },
     ],

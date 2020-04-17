@@ -36,7 +36,7 @@ CollectionPage.propTypes = {
     title: PropTypes.string,
     routeName: PropTypes.string,
     items: PropTypes.array,
-  }),
+  }).isRequired,
 };
 
 export default connect(mapStateToProps)(CollectionPage);

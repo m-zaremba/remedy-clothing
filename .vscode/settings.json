@@ -9,5 +9,23 @@
       "typescript",
       "typescriptreact"
   ],
-  "tslint.enable": false
+  "tslint.enable": false,
+  "cSpell.words": [
+    "signin"
+  ],
+  "cSpell.ignoreWords": [
+    "appspot",
+    "c",
+    "clth",
+    "j",
+    "jm",
+    "kmxg",
+    "kybsp",
+    "nkt",
+    "tv",
+    "w",
+    "wggyuj",
+    "wn",
+    "y"
+  ]
 }

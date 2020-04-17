@@ -6,9 +6,7 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
 
-  const onToken = (token) => {
-    // eslint-disable-next-line no-console
-    console.log(token);
+  const onToken = () => {
     // eslint-disable-next-line no-alert
     alert('Payment successful');
   };
