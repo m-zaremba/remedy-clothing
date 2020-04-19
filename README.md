@@ -44,7 +44,16 @@ yarn start
 
 ## Technologies used
 
-As of now (6th of April 2020), and on the master branch :
+As of 19th of April 2020:
+
+```
+technologies: {
+  ...previouslyUsedTechnologies,
+  Redux-Saga
+}
+```
+
+As of 6th of April 2020:
 
 - React
 - React Router
