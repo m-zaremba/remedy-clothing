@@ -22,6 +22,8 @@ Using terminal clone this repository and run npm install.
 git clone https://github.com/m-zaremba/remedy-clothing.git
 cd remedy-clothing
 yarn install
+cd client
+yarn install
 ```
 
 ## Configuring firebase
@@ -30,19 +32,32 @@ Configure your own firebase database (you can follow the instructions in [this](
 
 ## Configuring Stripe
 
-1. Obtain publishable key from your [Dashboard](https://dashboard.stripe.com/account/apikeys)
+1. Obtain publishable and secret key from your [Dashboard](https://dashboard.stripe.com/account/apikeys)
 2. Create '.env' file in the root folder of the project
-3. Paste into your '.env' file: REACT_APP_STRIPE_PUBLISHABLE_KEY='[Your publishable api key here]'
+3. Paste into your '.env' file:
+
+- REACT_APP_STRIPE_PUBLISHABLE_KEY=[Your publishable api key here]
+- STRIPE_SECRET_KEY=[Your secret api key here]
 
 ### Starting the app
 
 After installation and initial setup start the app with:
 
 ```
-yarn start
+yarn dev
 ```
 
 ## Technologies used
+
+As of 25th of April 2020:
+
+```
+technologies: {
+  ...previouslyUsedTechnologies,
+  Axios,
+  Express
+}
+```
 
 As of 19th of April 2020:
 
