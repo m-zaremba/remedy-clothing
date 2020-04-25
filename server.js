@@ -11,6 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
@@ -23,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.listen(port, (error) => {
   if (error) throw error;
-  console.log(`Server running on port ${port}`);
+  console.log('Server running on port ' + port);
 });
 
 app.post('/payment', (req, res) => {
@@ -33,7 +34,7 @@ app.post('/payment', (req, res) => {
     currency: 'usd',
   };
 
-  stripe.charges.create(body, (stripeRes, stripeErr) => {
+  stripe.charges.create(body, (stripeErr, stripeRes) => {
     if (stripeErr) {
       res.status(500).send({ error: stripeErr });
     } else {
