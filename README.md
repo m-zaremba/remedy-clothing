@@ -16,10 +16,24 @@ Live preview [here.](https://remedy-clth.herokuapp.com/) (Be patient - the site 
 
 ### Installation
 
-Using terminal clone this repository and run npm install.
+1. Using terminal clone this repository.
 
 ```
 git clone https://github.com/m-zaremba/remedy-clothing.git
+```
+
+2. Modify 'root' package.json with your node and npm versions e.g.:
+
+```
+"engines": {
+    "node": "13.13.0",
+    "npm": "6.14.4"
+  }
+```
+
+3. From the terminal run yarn install:
+
+```
 cd remedy-clothing
 yarn install
 cd client
@@ -36,8 +50,12 @@ Configure your own firebase database (you can follow the instructions in [this](
 2. Create '.env' file in the root folder of the project
 3. Paste into your '.env' file:
 
-- REACT_APP_STRIPE_PUBLISHABLE_KEY=[Your publishable api key here]
-- STRIPE_SECRET_KEY=[Your secret api key here]
+STRIPE_SECRET_KEY=[Your secret api key here]
+
+4. Create another '.env' file in the 'client' folder
+5. Paste into your '.env' file:
+
+REACT_APP_STRIPE_PUBLISHABLE_KEY=[Your publishable api key here]
 
 ### Starting the app
 
@@ -55,7 +73,8 @@ As of 25th of April 2020:
 technologies: {
   ...previouslyUsedTechnologies,
   Axios,
-  Express
+  Express,
+  Node.js
 }
 ```
 
