@@ -1,10 +1,13 @@
 /* eslint-disable no-alert */
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 
-const StripeCheckoutButton = ({ price }) => {
+import { paymentSuccess } from '../../redux/cart/cart.actions';
+
+const StripeCheckoutButton = ({ price, paymentSuccess }) => {
   const priceForStripe = price * 100;
   const publishableKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY;
 
@@ -19,6 +22,7 @@ const StripeCheckoutButton = ({ price }) => {
     })
       .then((response) => {
         alert('Payment successful');
+        paymentSuccess();
       })
       .catch((error) => {
         console.log('Payment error: ', error);
@@ -42,8 +46,13 @@ const StripeCheckoutButton = ({ price }) => {
   );
 };
 
+const mapDispatchToProps = (dispatch) => ({
+  paymentSuccess: () => dispatch(paymentSuccess()),
+});
+
 StripeCheckoutButton.propTypes = {
   price: PropTypes.number.isRequired,
+  paymentSuccess: PropTypes.func.isRequired,
 };
 
-export default StripeCheckoutButton;
+export default connect(null, mapDispatchToProps)(StripeCheckoutButton);
