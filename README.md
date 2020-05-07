@@ -4,6 +4,8 @@
 
 An e-commerce project built according to the course [Complete React Developer in 2020 (w / Redux, Hooks, GraphQL)](https://www.udemy.com/course/complete-react-developer-zero-to-mastery/) by Andrei Neagoie and Yihua Zhang.
 
+Currently working on Context and GraphQL code branches.
+
 Live preview [here.](https://remedy-clth.herokuapp.com/) (Be patient - the site may load quite slowly)
 
 ## Requirements
