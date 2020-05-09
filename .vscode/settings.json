@@ -10,26 +10,20 @@
       "typescriptreact"
   ],
   "tslint.enable": false,
-  "cSpell.words": [
-    "signin"
-  ],
   "cSpell.ignoreWords": [
     "appspot",
     "c",
     "clth",
+    "firebaseapp",
     "j",
     "jm",
     "kmxg",
     "kybsp",
-    "neagoie",
     "nkt",
-    "qdlq",
     "tv",
     "w",
     "wggyuj",
     "wn",
-    "y",
-    "yihua",
-    "zhang"
+    "y"
   ]
 }
