@@ -4,7 +4,7 @@
 
 An e-commerce project built according to the course [Complete React Developer in 2020 (w / Redux, Hooks, GraphQL)](https://www.udemy.com/course/complete-react-developer-zero-to-mastery/) by Andrei Neagoie and Yihua Zhang.
 
-Currently working on Context and GraphQL code branches.
+Currently working on GraphQL code branch.
 
 Live preview [here.](https://remedy-clth.herokuapp.com/) (Be patient - the site may load quite slowly)
 
@@ -69,7 +69,21 @@ yarn dev
 
 ## Technologies used
 
-As of 25th of April 2020:
+As of 21th of May 2020 - Redux Branch:
+
+```
+technologies: {
+- React
+- React Hooks
+- React Router
+- Context
+- Firebase (for user authentication)
+- Stripe (front-end part)
+- SASS
+}
+```
+
+As of 25th of April 2020 - Master Branch:
 
 ```
 technologies: {
@@ -80,16 +94,17 @@ technologies: {
 }
 ```
 
-As of 19th of April 2020:
+As of 19th of April 2020 - Master Branch:
 
 ```
 technologies: {
   ...previouslyUsedTechnologies,
   Redux-Saga
+  Styled Components (SASS removed)
 }
 ```
 
-As of 6th of April 2020:
+As of 6th of April 2020 - Master Branch:
 
 - React
 - React Router
