@@ -6,8 +6,9 @@ import { CartContext } from "../../providers/cart/cart.provider";
 
 import "./checkout.styles.scss";
 
-const CheckoutPage = ({ total }) => {
+const CheckoutPage = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
+
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -32,11 +33,11 @@ const CheckoutPage = ({ total }) => {
       ))}
       <div className="total">TOTAL: ${cartTotal}</div>
       <div className="test-warning">
-        *Please use the following test credit card for payments*
+        PLEASE USE THE FOLLOWING CREDENTIALS FOR TEST PAYMENTS
         <br />
-        4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
+        4242 4242 4242 4242 - Exp: 01/21 - CVV: 123
       </div>
-      <StripeCheckoutButton price={total} />
+      <StripeCheckoutButton price={cartTotal} />
     </div>
   );
 };
