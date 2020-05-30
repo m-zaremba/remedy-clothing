@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { Route } from "react-router-dom";
 
 import {
@@ -6,22 +6,38 @@ import {
   convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
+import { CollectionsContext } from "../../providers/collections/collections.provider";
+
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
 
 const ShopPage = ({ match }) => {
+  const { collections, setContextCollections } = useContext(CollectionsContext);
+  const [fetchedCollections, setFetchedCollections] = useState(null);
+
   useEffect(() => {
     const collectionRef = firestore.collection("collections");
 
     collectionRef.onSnapshot(async (snapshot) => {
-      convertCollectionsSnapshotToMap(snapshot);
+      const convertedCollections = convertCollectionsSnapshotToMap(snapshot);
+      setFetchedCollections(convertedCollections);
     });
   }, []);
+
+  useEffect(() => {
+    setContextCollections(fetchedCollections);
+  }, [fetchedCollections, setContextCollections]);
+
   return (
-    <div className="shop-page">
-      <Route exact path={`${match.path}`} component={CollectionsOverview} />
-      <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
-    </div>
+    collections && (
+      <div className="shop-page">
+        <Route exact path={`${match.path}`} component={CollectionsOverview} />
+        <Route
+          path={`${match.path}/:collectionId`}
+          component={CollectionPage}
+        />
+      </div>
+    )
   );
 };
 
