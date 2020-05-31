@@ -11,9 +11,15 @@ import { CollectionsContext } from "../../providers/collections/collections.prov
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
 
+import WithLoader from "../../components/collections-loader/collections-loader.component";
+
+const CollectionsOverviewWithLoader = WithLoader(CollectionsOverview);
+const CollectionPageWithLoader = WithLoader(CollectionPage);
+
 const ShopPage = ({ match }) => {
-  const { collections, setContextCollections } = useContext(CollectionsContext);
+  const { setContextCollections } = useContext(CollectionsContext);
   const [fetchedCollections, setFetchedCollections] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = firestore
@@ -21,6 +27,7 @@ const ShopPage = ({ match }) => {
       .onSnapshot(async (snapshot) => {
         const convertedCollections = convertCollectionsSnapshotToMap(snapshot);
         setFetchedCollections(convertedCollections);
+        setIsLoading(false);
       });
     return () => unsubscribe();
   }, []);
@@ -30,15 +37,21 @@ const ShopPage = ({ match }) => {
   }, [fetchedCollections, setContextCollections]);
 
   return (
-    collections && (
-      <div className="shop-page">
-        <Route exact path={`${match.path}`} component={CollectionsOverview} />
-        <Route
-          path={`${match.path}/:collectionId`}
-          component={CollectionPage}
-        />
-      </div>
-    )
+    <div className="shop-page">
+      <Route
+        exact
+        path={`${match.path}`}
+        render={(props) => (
+          <CollectionsOverviewWithLoader isLoading={isLoading} {...props} />
+        )}
+      />
+      <Route
+        path={`${match.path}/:collectionId`}
+        render={(props) => (
+          <CollectionPageWithLoader isLoading={isLoading} {...props} />
+        )}
+      />
+    </div>
   );
 };
 
