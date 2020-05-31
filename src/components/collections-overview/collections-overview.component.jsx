@@ -7,14 +7,14 @@ import { CollectionsContext } from "../../providers/collections/collections.prov
 import "./collections-overview.styles.scss";
 
 const CollectionsOverview = () => {
-  const collectionsMap = useContext(CollectionsContext);
-  const collections = Object.keys(collectionsMap.collections).map(
-    (key) => collectionsMap.collections[key]
+  const { collections } = useContext(CollectionsContext);
+  const collectionsMap = Object.keys(collections).map(
+    (key) => collections[key]
   );
 
   return (
     <div className="collections-overview">
-      {collections.map(({ id, ...otherCollectionProps }) => (
+      {collectionsMap.map(({ id, ...otherCollectionProps }) => (
         <CollectionPreview key={id} {...otherCollectionProps} />
       ))}
     </div>

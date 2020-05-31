@@ -16,12 +16,13 @@ const ShopPage = ({ match }) => {
   const [fetchedCollections, setFetchedCollections] = useState(null);
 
   useEffect(() => {
-    const collectionRef = firestore.collection("collections");
-
-    collectionRef.onSnapshot(async (snapshot) => {
-      const convertedCollections = convertCollectionsSnapshotToMap(snapshot);
-      setFetchedCollections(convertedCollections);
-    });
+    const unsubscribe = firestore
+      .collection("collections")
+      .onSnapshot(async (snapshot) => {
+        const convertedCollections = convertCollectionsSnapshotToMap(snapshot);
+        setFetchedCollections(convertedCollections);
+      });
+    return () => unsubscribe();
   }, []);
 
   useEffect(() => {
