@@ -1,74 +1,74 @@
 .loader-overlay {
   width: 100%;
-}
 
-.loader-container {
-  padding: 20px 0;
-}
+  .loader-container {
+    padding: 20px 0;
 
-.dummy-title {
-  margin: 20px 10px;
-  height: 30px;
-  width: 180px;
-  background-color: #f2f2f2;
-}
+    .dummy-title {
+      margin: 20px 10px;
+      height: 30px;
+      width: 180px;
+      background-color: #f2f2f2;
+    }
 
-.item-placeholder-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+    .item-placeholder-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
 
-.item-placeholder {
-  width: 22vw;
-  height: 350px;
-  background-color: #f2f2f2;
-  margin: 0 10px;
-  overflow: hidden;
-  position: relative;
-}
+    .item-placeholder {
+      width: 22vw;
+      height: 350px;
+      background-color: #f2f2f2;
+      margin: 0 10px;
+      overflow: hidden;
+      position: relative;
 
-.item-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130px;
+        height: 100%;
+        background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
+        animation: loading 2s infinite linear;
+      }
+    }
 
-.item-name-placeholder {
-  width: 100px;
-  height: 28px;
-  background-color: #f2f2f2;
-  margin: 10px 10px;
-}
+    .item-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-.item-price-placeholder {
-  width: 28px;
-  height: 28px;
-  background-color: #f2f2f2;
-  margin: 10px 20px;
-}
+    .item-name-placeholder {
+      width: 100px;
+      height: 28px;
+      background-color: #f2f2f2;
+      margin: 10px 10px;
+    }
 
-.items-wrapper {
-  display: flex;
-}
+    .item-price-placeholder {
+      width: 28px;
+      height: 28px;
+      background-color: #f2f2f2;
+      margin: 10px 20px;
+    }
 
-@keyframes loading {
-  0% {
-    transform: translateX(-130px);
+    .items-wrapper {
+      display: flex;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: translateX(-130px);
+      }
+      50%,
+      100% {
+        transform: translateX(22vw);
+      }
+    }
   }
-  50%,
-  100% {
-    transform: translateX(22vw);
-  }
-}
-
-.item-placeholder::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 130px;
-  height: 100%;
-  background: linear-gradient(to right, #f2f2f2, #ddd, #f2f2f2);
-  animation: loading 2s infinite linear;
 }
