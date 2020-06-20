@@ -7,6 +7,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -18,6 +24,10 @@ export const LogoContainer = styled(Link)`
 export const Logo = styled.span`
   font-family: 'Libre Barcode 39 Extended Text', cursive;
   font-size: 2.5rem;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const OptionsContainer = styled.div`
@@ -26,6 +36,10 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
 `;
 
 export const OptionLink = styled(Link)`

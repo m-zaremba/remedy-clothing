@@ -9,6 +9,10 @@ export const CollectionItemContainer = styled.div`
   align-items: center;
   position: relative;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+  }
 `;
 
 export const BackgroundImage = styled.div`
@@ -34,6 +38,13 @@ export const CollectionItemButton = styled(CustomButton)`
   ${CollectionItemContainer}:hover & {
     opacity: 0.85;
     display: flex;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    min-width: unset;
+    padding: 0 10px;
+    opacity: 0.9;
   }
 `;
 
