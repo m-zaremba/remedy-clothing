@@ -11,7 +11,7 @@ export const CollectionItemContainer = styled.div`
   margin-bottom: 30px;
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    width: 80vw;
   }
 `;
 
