@@ -69,9 +69,20 @@ yarn dev
 
 ## Technologies used
 
+As of 22nd of Jun 2020 - Master Branch:
+
+```
+technologies: {
+...previouslyUsedTechnologies,
+- React Lazy + Suspense
+}
+
+```
+
 As of 21th of May 2020 - Redux Branch:
 
 ```
+
 technologies: {
 - React
 - React Hooks
@@ -80,28 +91,33 @@ technologies: {
 - Firebase (for user authentication)
 - Stripe (front-end part)
 - SASS
-}
+  }
+
 ```
 
 As of 25th of April 2020 - Master Branch:
 
 ```
+
 technologies: {
-  ...previouslyUsedTechnologies,
-  Axios,
-  Express,
-  Node.js
+...previouslyUsedTechnologies,
+Axios,
+Express,
+Node.js
 }
+
 ```
 
 As of 19th of April 2020 - Master Branch:
 
 ```
+
 technologies: {
-  ...previouslyUsedTechnologies,
-  Redux-Saga
-  Styled Components (SASS removed)
+...previouslyUsedTechnologies,
+Redux-Saga
+Styled Components (SASS removed)
 }
+
 ```
 
 As of 6th of April 2020 - Master Branch:
@@ -113,3 +129,7 @@ As of 6th of April 2020 - Master Branch:
 - Firebase (for user authentication)
 - Stripe (front-end part)
 - SASS
+
+```
+
+```
