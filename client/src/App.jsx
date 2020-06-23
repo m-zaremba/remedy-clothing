@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import Header from './components/header/header.component';
 import Spinner from './components/spinner/spinner.component';
+import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
 import { GlobalStyle } from './global.styles';
 
@@ -30,12 +31,32 @@ const App = ({ checkUserSession, currentUser }) => {
       <Header />
       <Switch>
         <Suspense fallback={<Spinner />}>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/shop" component={ShopPage} />
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <ErrorBoundary>
+                <HomePage {...props} />
+              </ErrorBoundary>
+            )}
+          />
+
+          <Route
+            path="/shop"
+            render={(props) => (
+              <ErrorBoundary>
+                <ShopPage {...props} />
+              </ErrorBoundary>
+            )}
+          />
           <Route
             exact
             path="/signin"
-            render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />)}
+            render={(props) => (
+              <ErrorBoundary>
+                {currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage {...props} />}
+              </ErrorBoundary>
+            )}
           />
           <Route exact path="/checkout" component={Checkout} />
         </Suspense>
