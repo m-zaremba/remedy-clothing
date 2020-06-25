@@ -2,32 +2,32 @@ const INITIAL_STATE = {
   sections: [
     {
       title: 'hats',
-      imageUrl: '/images/hats.png',
+      imageUrl: '/images/hats.webp',
       id: 1,
       linkUrl: 'shop/hats',
     },
     {
       title: 'jackets',
-      imageUrl: '/images/jackets.png',
+      imageUrl: '/images/jackets.webp',
       id: 2,
       linkUrl: 'shop/jackets',
     },
     {
       title: 'sneakers',
-      imageUrl: '/images/sneakers.png',
+      imageUrl: '/images/sneakers.webp',
       id: 3,
       linkUrl: 'shop/sneakers',
     },
     {
       title: 'womens',
-      imageUrl: '/images/womens.png',
+      imageUrl: '/images/womens.webp',
       size: 'large',
       id: 4,
       linkUrl: 'shop/womens',
     },
     {
       title: 'mens',
-      imageUrl: '/images/men.png',
+      imageUrl: '/images/men.webp',
       size: 'large',
       id: 5,
       linkUrl: 'shop/mens',
