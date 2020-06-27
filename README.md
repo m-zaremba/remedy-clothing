@@ -69,6 +69,16 @@ yarn dev
 
 ## Technologies used
 
+As of 25th of Jun 2020 - Master Branch:
+
+```
+technologies: {
+...previouslyUsedTechnologies,
+- PWA code update
+}
+
+```
+
 As of 22nd of Jun 2020 - Master Branch:
 
 ```
