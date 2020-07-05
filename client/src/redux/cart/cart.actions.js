@@ -26,3 +26,12 @@ export const clearCart = () => ({
 export const paymentSuccess = () => ({
   type: cartActionTypes.PAYMENT_SUCCESS,
 });
+
+export const updateFirebaseCart = () => ({
+  type: cartActionTypes.UPDATE_FIREBASE_CART,
+});
+
+export const setFirebaseCart = (cartItems) => ({
+  type: cartActionTypes.SET_FIREBASE_CART,
+  payload: cartItems,
+});
