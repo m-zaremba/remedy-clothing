@@ -69,6 +69,16 @@ yarn dev
 
 ## Technologies used
 
+As of 30th of August 2020 - Master Branch:
+
+```
+technologies: {
+...previouslyUsedTechnologies,
+- Enzyme
+}
+
+```
+
 As of 25th of Jun 2020 - Master Branch:
 
 ```
