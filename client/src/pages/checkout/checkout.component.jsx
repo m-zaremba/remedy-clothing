@@ -16,7 +16,7 @@ import {
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 
-const Checkout = ({ cartItems, total }) => {
+export const Checkout = ({ cartItems, total }) => {
   return (
     <CheckoutPageContainer>
       <CheckoutHeader>
