@@ -28,6 +28,8 @@ export const BackgroundImage = styled.div`
   }
 `;
 
+BackgroundImage.displayName = 'BackgroundImage';
+
 export const CollectionItemButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
@@ -48,6 +50,8 @@ export const CollectionItemButton = styled(CustomButton)`
   }
 `;
 
+CollectionItemButton.displayName = 'AddButton';
+
 export const CollectionItemFooterContainer = styled.div`
   width: 100%;
   height: 5%;
@@ -56,11 +60,17 @@ export const CollectionItemFooterContainer = styled.div`
   font-size: 18px;
 `;
 
+CollectionItemFooterContainer.displayName = 'CollectionItemFooterContainer';
+
 export const FooterItemName = styled.span`
   width: 90%;
   margin-bottom: 15px;
 `;
 
+FooterItemName.displayName = 'FooterItemName';
+
 export const FooterItemPrice = styled.span`
   width: 10%;
 `;
+
+FooterItemPrice.displayName = 'FooterItemPrice';
