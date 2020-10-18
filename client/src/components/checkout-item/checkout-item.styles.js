@@ -41,6 +41,8 @@ export const Quantity = styled.div`
   display: flex;
 `;
 
+Quantity.displayName = 'Quantity';
+
 export const Arrow = styled.div`
   cursor: pointer;
 `;
@@ -57,3 +59,5 @@ export const RemoveButton = styled.div`
     padding-left: 0;
   }
 `;
+
+RemoveButton.displayName = 'RemoveButton';
