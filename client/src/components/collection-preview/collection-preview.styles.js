@@ -16,6 +16,8 @@ export const Title = styled.div`
   cursor: pointer;
 `;
 
+Title.displayName = 'TitleButton';
+
 export const Preview = styled.div`
   display: flex;
   justify-content: space-between;

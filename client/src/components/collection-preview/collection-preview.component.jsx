@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes, { object } from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
-import CollectionItem from '../collection-item/collection-item.component';
+import { CollectionItem } from '../collection-item/collection-item.component';
 
 import { CollectionPreviewContainer, Title, Preview } from './collection-preview.styles';
 
-const CollectionPreview = ({ title, items, history, match, routeName }) => {
+export const CollectionPreview = ({ title, items, history, match, routeName }) => {
   return (
     <CollectionPreviewContainer>
       <Title
