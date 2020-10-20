@@ -69,6 +69,8 @@ export const MenuItemContainer = styled.div`
   }
 `;
 
+MenuItemContainer.displayName = 'MenuItemContainer';
+
 export const MenuItemTitle = styled.h1`
   font-weight: bold;
   margin-bottom: 6px;
