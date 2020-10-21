@@ -1,3 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShopPage should render ShopPage component 1`] = `ReactWrapper {}`;
+exports[`ShopPage should render ShopPage component 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Provider
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <ShopPage
+        fetchCollectionsStart={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+        match={
+          Object {
+            "path": "",
+          }
+        }
+      >
+        <div>
+          <Suspense
+            fallback={<Spinner />}
+          >
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.lazy),
+                  "_ctor": [Function],
+                  "_result": Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(Component)",
+                    "type": [Function],
+                  },
+                  "_status": 1,
+                }
+              }
+              exact={true}
+              path=""
+            />
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.lazy),
+                  "_ctor": [Function],
+                  "_result": null,
+                  "_status": -1,
+                }
+              }
+              path="/:collectionId"
+            />
+            <Spinner>
+              <styled.div>
+                <div
+                  className="sc-AxjAm HvuBM"
+                >
+                  <styled.div>
+                    <div
+                      className="sc-AxirZ haZpvb"
+                    />
+                  </styled.div>
+                </div>
+              </styled.div>
+            </Spinner>
+          </Suspense>
+        </div>
+      </ShopPage>
+    </Provider>
+  </Router>
+</BrowserRouter>
+`;

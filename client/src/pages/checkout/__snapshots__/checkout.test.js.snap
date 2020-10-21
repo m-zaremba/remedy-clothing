@@ -1,3 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkout should render Checkout component 1`] = `ShallowWrapper {}`;
+exports[`Checkout should render Checkout component 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <span>
+        Product
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Description
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Quantity
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Price
+      </span>
+    </styled.div>
+    <styled.div>
+      <span>
+        Remove
+      </span>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <span>
+      TOTAL: $
+      77
+    </span>
+  </styled.div>
+  <Connect(StripeCheckoutButton)
+    price={77}
+  />
+  <styled.div>
+    PLEASE USE THE FOLLOWING CREDENTIALS FOR TEST PAYMENTS
+    <br />
+    Card number: 4242 4242 4242 4242
+    <br />
+    EXP: 01/21
+    <br />
+    CVV: 123
+  </styled.div>
+</styled.div>
+`;

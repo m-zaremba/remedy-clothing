@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000",
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -28,7 +33,9 @@
     "reselect": "^4.0.0",
     "styled-components": "^5.0.1"
   },
-    "resolutions": { "**/**/lodash": "^4.17.19" },
+  "resolutions": {
+    "**/**/lodash": "^4.17.19"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -56,6 +63,7 @@
     ]
   },
   "devDependencies": {
+    "enzyme-to-json": "^3.6.1",
     "poetic": "^1.4.1"
   }
 }

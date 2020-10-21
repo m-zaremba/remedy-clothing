@@ -1,3 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing Header component should render Header component 1`] = `ShallowWrapper {}`;
+exports[`testing Header component should render Header component 1`] = `
+<styled.div>
+  <Styled(Link)
+    to="/"
+  >
+    <styled.span>
+      REMEDY
+    </styled.span>
+  </Styled(Link)>
+  <styled.div>
+    <OptionLink
+      to="/shop"
+    >
+      SHOP
+    </OptionLink>
+    <OptionLink
+      to="/"
+    >
+      CONTACT
+    </OptionLink>
+    <OptionLink
+      as="div"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+      role="button"
+      tabIndex={0}
+    >
+      SIGN OUT
+    </OptionLink>
+    <Connect(CartIcon) />
+  </styled.div>
+</styled.div>
+`;

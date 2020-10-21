@@ -1,3 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing CollectionItem component should render CollectionItem component 1`] = `ShallowWrapper {}`;
+exports[`testing CollectionItem component should render CollectionItem component 1`] = `
+<styled.div>
+  <BackgroundImage
+    imageUrl="www.testImage.com"
+  />
+  <CollectionItemFooterContainer>
+    <FooterItemName>
+      black hat
+    </FooterItemName>
+    <FooterItemPrice>
+      10
+    </FooterItemPrice>
+  </CollectionItemFooterContainer>
+  <AddButton
+    inverted={true}
+    onClick={[Function]}
+  >
+    Add to cart
+  </AddButton>
+</styled.div>
+`;

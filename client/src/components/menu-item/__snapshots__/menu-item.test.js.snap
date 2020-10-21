@@ -1,3 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing MenuItem component should render MenuItem component 1`] = `ShallowWrapper {}`;
+exports[`testing MenuItem component should render MenuItem component 1`] = `
+<MenuItemContainer
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="button"
+  size="large"
+  tabIndex={0}
+>
+  <styled.div
+    style={
+      Object {
+        "backgroundImage": "url(www.testImageURL.com)",
+      }
+    }
+  />
+  <styled.div>
+    <styled.h1>
+      hats
+    </styled.h1>
+    <styled.p>
+      SHOP NOW
+    </styled.p>
+  </styled.div>
+</MenuItemContainer>
+`;

@@ -1,3 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing CartItem component should render CartItem component 1`] = `ShallowWrapper {}`;
+exports[`testing CartItem component should render CartItem component 1`] = `
+<styled.div>
+  <styled.img
+    alt="item"
+    src="www.testURL.com"
+  />
+  <styled.div>
+    <styled.span>
+      testItem
+    </styled.span>
+    <styled.span
+      className="price"
+    >
+      1
+       x $
+      10
+    </styled.span>
+  </styled.div>
+</styled.div>
+`;

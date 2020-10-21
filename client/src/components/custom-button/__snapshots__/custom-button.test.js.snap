@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing CustomButton component should render CustomButton component 1`] = `ShallowWrapper {}`;
+exports[`testing CustomButton component should render CustomButton component 1`] = `
+<styled.button
+  inverted={false}
+  isGoogleSignIn={false}
+  type="button"
+>
+  <div>
+    test
+  </div>
+</styled.button>
+`;
